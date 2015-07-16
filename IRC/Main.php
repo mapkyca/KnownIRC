@@ -70,7 +70,7 @@ namespace IdnoPlugins\IRC {
 				    $link = "https://webchat.freenode.net/?channels=" . trim($userdetails['channel'], ' #');
 				}
 				
-				$object->setPosseLink('linkedin', $link, $userdetails['channel']); 
+				$object->setPosseLink('irc', $link, $userdetails['channel']); 
 				$object->save();
 				
 			    } catch (\Exception $e) {
@@ -105,7 +105,7 @@ namespace IdnoPlugins\IRC {
 				$link = "https://webchat.freenode.net/?channels=" . trim($userdetails['channel'], ' #');
 			    }
 
-			    $object->setPosseLink('linkedin', $link, $userdetails['channel']); 
+			    $object->setPosseLink('irc', $link, $userdetails['channel']); 
 			    $object->save();
 
 			} catch (\Exception $e) {
@@ -141,7 +141,7 @@ namespace IdnoPlugins\IRC {
 					$link = "https://webchat.freenode.net/?channels=" . trim($userdetails['channel'], ' #');
 				    }
 
-				    $object->setPosseLink('linkedin', $link, $userdetails['channel']); 
+				    $object->setPosseLink('irc', $link, $userdetails['channel']); 
 				    $object->save();
 
 				} catch (\Exception $e) {
