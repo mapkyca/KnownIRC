@@ -49,6 +49,8 @@
 		if ($port == 6697)
 		    $prefix = 'tls://';
 		
+		error_log("IRC > Connecting to {$prefix}$server:$port");
+		
 		$this->socket = fsockopen($prefix.$server, $port, $errno, $errstr);
 
 		if (!$this->socket) {
