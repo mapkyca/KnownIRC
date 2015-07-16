@@ -105,7 +105,7 @@
     				<input type="text" name="server" placeholder="Network & port, e.g. irc.freenode.net:6697" required />
     				<input type="text" name="channel" placeholder="Channel, e.g. #knownchat" required />
 				<input type="text" name="username" placeholder="Username to use" required />
-				<input type="password" name="password" placeholder="nickserv password (optional)" required />
+				<input type="password" name="password" placeholder="nickserv password (optional)" />
     				<input type="submit" value="Add channel..." class="btn btn-default" />
 				<?= \Idno\Core\site()->actions()->signForm('/account/irc/') ?>
     			    </form>
