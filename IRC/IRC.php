@@ -18,7 +18,7 @@
 			throw new \Exception("There was a problem writing '$string' to IRC");
 		
 		// Give server a chance
-		sleep(2); 
+		sleep(3); 
 		
 		return $written;
 	    }
