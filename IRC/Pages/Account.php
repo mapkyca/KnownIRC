@@ -37,8 +37,16 @@
 		    $server = trim($this->getInput('server'));
 		    $channel = trim($this->getInput('channel'));
 		    $username = trim($this->getInput('username'));
+		    $password = trim($this->getInput('password'));
+		    $port = 6697;
 		    
-		    $id = sha1($server.$channel.$username);
+		    // Extract port
+		    $channelport = explode(':', $channel);
+		    $channel = $channelport[0];
+		    if (isset($channelport[1]))
+			$port = $channelport[1];
+		    
+		    $id = sha1($server.$port.$channel.$username);
 		    
 		    $user = \Idno\Core\site()->session()->currentUser();
 		    
@@ -50,7 +58,9 @@
 			'id' => $id,
 			'server' => $server,
 			'channel' => $channel,
-			'username' => $username
+			'username' => $username,
+			'password' => $password,
+			'port' => $port
 		    ];
 		    
 		    $user->save();
